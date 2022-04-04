@@ -17,13 +17,10 @@
 </div>
 
 <div class="content">
-    
 {block name=content} Domyślna treść zawartości .... {/block}
 </div><!-- content -->
 
 <div class="footer">
-	<p>
-{block name=footer}  {/block}
 	<footer id="footer">
 				
 					<ul class="copyright">

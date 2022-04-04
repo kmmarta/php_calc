@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-01 15:34:11
-  from 'C:\xampp\htdocs\php_06_nowastruktura\app\views\CalcView.html' */
+/* Smarty version 4.1.0, created on 2022-04-01 15:55:32
+  from 'C:\xampp\htdocs\php_06_namespaces\app\views\CalcView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6246ff530607c1_07453286',
+  'unifunc' => 'content_62470454a05bf2_56978622',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '29ee67b0828a4e833a61d42173cbcbf75993f417' => 
+    '539dfb074d54a411cf2dd51c3f900d2dc26cedc6' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\php_06_nowastruktura\\app\\views\\CalcView.html',
-      1 => 1648820050,
+      0 => 'C:\\xampp\\htdocs\\php_06_namespaces\\app\\views\\CalcView.tpl',
+      1 => 1648821286,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6246ff530607c1_07453286 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62470454a05bf2_56978622 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -29,21 +29,20 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13587565686246ff5303e562_85662336', 'content');
-$_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.html");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_229531655624704549cfaa3_65191141', 'content');
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_13587565686246ff5303e562_85662336 extends Smarty_Internal_Block
+class Block_229531655624704549cfaa3_65191141 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_13587565686246ff5303e562_85662336',
+    0 => 'Block_229531655624704549cfaa3_65191141',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
-
 
 
 <header>
