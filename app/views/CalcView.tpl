@@ -1,17 +1,16 @@
 {extends file="main.tpl"}
-{* przy zdefiniowanych folderach nie trzeba już podawać pełnej ścieżki *}
-
-
 
 {block name=content}
 
-<header>
-        <h2>Kalkulator kredytowy</h2>
-        <p>Oblicz miesięczną rate kredytu</p>
-    </header>
+<div class="pure-menu pure-menu-horizontal bottom-margin">
+	<a href="{$conf->action_url}logout"  class="pure-menu-heading pure-menu-link">wyloguj</a>
+	<span style="float:right;">użytkownik: {$user->login}, rola: {$user->role}</span>
+</div>
 
-
-    <div class="row">
+<form action="{$conf->action_url}calcCompute" method="post" class="pure-form pure-form-aligned bottom-margin">
+	<legend>Kalkulator kredytowy</legend>
+	<fieldset>
+         <div class="row">
         <div class="col-6">
 
             <!-- Form -->
@@ -39,43 +38,15 @@
                 </form>
 
                 <hr />
-    
+            
+        
 
-
-
-<div class="messages">
-
-{* wyświeltenie listy błędów, jeśli istnieją *}
-{if $msgs->isError()}
-	<h4>Wystąpiły błędy: </h4>
-	<ol class="err">
-	{foreach $msgs->getErrors() as $err}
-	{strip}
-		<li>{$err}</li>
-	{/strip}
-	{/foreach}
-	</ol>
-{/if}
-
-{* wyświeltenie listy informacji, jeśli istnieją *}
-{if $msgs->isInfo()}
-	<h4>Informacje: </h4>
-	<ol class="inf">
-	{foreach $msgs->getInfos() as $inf}
-	{strip}
-		<li>{$inf}</li>
-	{/strip}
-	{/foreach}
-	</ol>
-{/if}
+{include file='messages.tpl'}
 
 {if isset($res->result)}
-	<h4>Wynik</h4>
-	<p class="res">
-	{$res->result}
-	</p>
-{/if}
-
+<div class="messages inf">
+	Wynik: {$res->result}
 </div>
+{/if}
 
 {/block}

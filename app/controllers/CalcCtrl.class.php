@@ -15,7 +15,10 @@ namespace app\controllers;
 use app\forms\CalcForm;
 use app\transfer\CalcResult;
 
-
+/** Kontroler kalkulatora
+ * @author Przemysław Kudłacik
+ *
+ */
 class CalcCtrl {
 
 	private $form;   //dane formularza (do obliczeń i dla widoku)
@@ -45,14 +48,14 @@ class CalcCtrl {
 	 */
 	public function validate() {
 		// sprawdzenie, czy parametry zostały przekazane
-		if (! (isset ( $this->form->a) && isset ( $this->form->b ) && isset ( $this->form->c ))) {
+		if (! (isset ( $this->form->a ) && isset ( $this->form->b ) && isset ( $this->form->c ))) {
 			// sytuacja wystąpi kiedy np. kontroler zostanie wywołany bezpośrednio - nie z formularza
 			return false;
 		}
 		
 		// sprawdzenie, czy potrzebne wartości zostały przekazane
 		if ($this->form->a == "") {
-			getMessages()->addError('Nie podano kwoty');
+			getMessages()->addError('Nie podano  kwoty');
 		}
 		if ($this->form->b == "") {
 			getMessages()->addError('Nie podano liczby lat');
@@ -60,12 +63,15 @@ class CalcCtrl {
 		if ($this->form->c == "") {
 			getMessages()->addError('Nie podano oprocentowania');
 		}
-		
 		// nie ma sensu walidować dalej gdy brak parametrów
 		if (! getMessages()->isError()) {
 			
 			// sprawdzenie, czy $x i $y są liczbami całkowitymi
-			if (! is_numeric ( $this->form->a )) {
+			
+		
+		return ! getMessages()->isError();
+	}
+        if (! is_numeric ( $this->form->a )) {
 				getMessages()->addError('wartość nie jest liczbą całkowitą');
 			}
 			
@@ -77,16 +83,14 @@ class CalcCtrl {
 			}
 		}
 		
-		return ! getMessages()->isError();
-	}
 	
 	/** 
 	 * Pobranie wartości, walidacja, obliczenie i wyświetlenie
 	 */
 	public function process(){
 
-		
 		$this->getParams();
+		
 		if ($this->validate()) {
 				
 			//konwersja parametrów na int
@@ -105,23 +109,22 @@ class CalcCtrl {
             	getMessages()->addInfo('Wykonano obliczenia.');
         }
 		$this->generateView();
-	}
 	
+        }
 	
 	/**
 	 * Wygenerowanie widoku
 	 */
 	public function generateView(){
-		//nie trzeba już tworzyć Smarty i przekazywać mu konfiguracji i messages
-		// - wszystko załatwia funkcja getSmarty()
-		
+		global $user;
+
+		getSmarty()->assign('user',$user);
+				
 		getSmarty()->assign('page_title','Kalkulator kredytowy');
-		
-		getSmarty()->assign('page_header','Oblicz rate');
-					
+
 		getSmarty()->assign('form',$this->form);
 		getSmarty()->assign('res',$this->result);
 		
-		getSmarty()->display('CalcView.tpl'); // już nie podajemy pełnej ścieżki - foldery widoków są zdefiniowane przy ładowaniu Smarty
+		getSmarty()->display('CalcView.tpl');
 	}
 }
