@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-05 09:59:32
-  from 'C:\xampp\htdocs\Php_calc\app\views\LoginView.tpl' */
+/* Smarty version 4.1.0, created on 2022-04-02 14:57:28
+  from 'C:\xampp\htdocs\php_07_role\app\views\LoginView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_624bf6e41e8f79_81438877',
+  'unifunc' => 'content_624848380048c1_78676906',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'b07c6b184331aa36b3667a34862564bbbb3fde4f' => 
+    '61e7a82ccd1747d6c26028906ddea5bb2c6acfa0' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Php_calc\\app\\views\\LoginView.tpl',
-      1 => 1648903335,
+      0 => 'C:\\xampp\\htdocs\\php_07_role\\app\\views\\LoginView.tpl',
+      1 => 1648903852,
       2 => 'file',
     ),
   ),
@@ -21,25 +21,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:messages.tpl' => 1,
   ),
 ),false)) {
-function content_624bf6e41e8f79_81438877 (Smarty_Internal_Template $_smarty_tpl) {
+function content_624848380048c1_78676906 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1617586183624bf6e41d0c90_18108264', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_148209614362484837f3a190_47162315', 'content');
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_1617586183624bf6e41d0c90_18108264 extends Smarty_Internal_Block
+class Block_148209614362484837f3a190_47162315 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1617586183624bf6e41d0c90_18108264',
+    0 => 'Block_148209614362484837f3a190_47162315',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

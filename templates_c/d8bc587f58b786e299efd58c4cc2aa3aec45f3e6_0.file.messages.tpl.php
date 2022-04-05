@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-02 14:43:32
-  from 'C:\xampp\htdocs\php_07_ochrona_dostepu\app\views\templates\messages.tpl' */
+/* Smarty version 4.1.0, created on 2022-04-02 14:57:05
+  from 'C:\xampp\htdocs\php_07_role\app\views\templates\messages.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_624844f4ccf473_80036305',
+  'unifunc' => 'content_624848210513a9_67096514',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '71c757cff0aac7d04ef2eacbc85a268c424bb254' => 
+    'd8bc587f58b786e299efd58c4cc2aa3aec45f3e6' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\php_07_ochrona_dostepu\\app\\views\\templates\\messages.tpl',
-      1 => 1648903335,
+      0 => 'C:\\xampp\\htdocs\\php_07_role\\app\\views\\templates\\messages.tpl',
+      1 => 1648903852,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_624844f4ccf473_80036305 (Smarty_Internal_Template $_smarty_tpl) {
+function content_624848210513a9_67096514 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['msgs']->value->isError()) {?>
-<div class="messages err">
+<div class="messages error">
 	<ol>
 	<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['msgs']->value->getErrors(), 'err');
@@ -39,7 +39,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
 <?php }
 if ($_smarty_tpl->tpl_vars['msgs']->value->isInfo()) {?>
-<div class="messages inf bottom-margin">
+<div class="messages info bottom-margin">
 	<ol>
 	<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['msgs']->value->getInfos(), 'inf');

@@ -63,15 +63,12 @@ class CalcCtrl {
 		if ($this->form->c == "") {
 			getMessages()->addError('Nie podano oprocentowania');
 		}
+		
 		// nie ma sensu walidować dalej gdy brak parametrów
 		if (! getMessages()->isError()) {
 			
 			// sprawdzenie, czy $x i $y są liczbami całkowitymi
-			
-		
-		return ! getMessages()->isError();
-	}
-        if (! is_numeric ( $this->form->a )) {
+			if (! is_numeric ( $this->form->a )) {
 				getMessages()->addError('wartość nie jest liczbą całkowitą');
 			}
 			
@@ -83,6 +80,9 @@ class CalcCtrl {
 			}
 		}
 		
+		
+		return ! getMessages()->isError();
+	}
 	
 	/** 
 	 * Pobranie wartości, walidacja, obliczenie i wyświetlenie
@@ -116,11 +116,10 @@ class CalcCtrl {
 	 * Wygenerowanie widoku
 	 */
 	public function generateView(){
-		global $user;
 
-		getSmarty()->assign('user',$user);
+		getSmarty()->assign('user',unserialize($_SESSION['user']));
 				
-		getSmarty()->assign('page_title','Kalkulator kredytowy');
+		getSmarty()->assign('page_title','Kalkulator kredytowt');
 
 		getSmarty()->assign('form',$this->form);
 		getSmarty()->assign('res',$this->result);
