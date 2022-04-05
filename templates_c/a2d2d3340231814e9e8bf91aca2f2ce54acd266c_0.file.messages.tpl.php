@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-02 14:57:05
-  from 'C:\xampp\htdocs\php_07_role\app\views\templates\messages.tpl' */
+/* Smarty version 4.1.0, created on 2022-04-02 14:33:17
+  from 'C:\xampp\htdocs\php_07_routing\app\views\templates\messages.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_624848210513a9_67096514',
+  'unifunc' => 'content_6248428d6e6158_18746607',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'd8bc587f58b786e299efd58c4cc2aa3aec45f3e6' => 
+    'a2d2d3340231814e9e8bf91aca2f2ce54acd266c' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\php_07_role\\app\\views\\templates\\messages.tpl',
-      1 => 1648903852,
+      0 => 'C:\\xampp\\htdocs\\php_07_routing\\app\\views\\templates\\messages.tpl',
+      1 => 1648902662,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_624848210513a9_67096514 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6248428d6e6158_18746607 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['msgs']->value->isError()) {?>
 <div class="messages error">
 	<ol>

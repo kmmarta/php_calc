@@ -10,7 +10,7 @@
 <form action="{$conf->action_url}calcCompute" method="post" class="pure-form pure-form-aligned bottom-margin">
 	<legend>Kalkulator kredytowy</legend>
 	<fieldset>
-        <div class="row">
+             <div class="row">
         <div class="col-6">
 
             <!-- Form -->
@@ -40,7 +40,6 @@
                 <hr />
             
         
-
 {include file='messages.tpl'}
 
 {if isset($res->result)}

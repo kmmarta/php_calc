@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-02 14:58:40
-  from 'C:\xampp\htdocs\php_07_role\app\views\CalcView.tpl' */
+/* Smarty version 4.1.0, created on 2022-04-05 10:06:45
+  from 'C:\xampp\htdocs\Php_calc\app\views\CalcView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_624848808ff631_86746754',
+  'unifunc' => 'content_624bf895c703e8_17751800',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '15ba7fc8245b5ddd7f93c4ddf0956c41c2b5d2df' => 
+    '0438f6f4093ff52d3b2e901a79f810d215aede80' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\php_07_role\\app\\views\\CalcView.tpl',
-      1 => 1648904320,
+      0 => 'C:\\xampp\\htdocs\\Php_calc\\app\\views\\CalcView.tpl',
+      1 => 1648903726,
       2 => 'file',
     ),
   ),
@@ -21,23 +21,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:messages.tpl' => 1,
   ),
 ),false)) {
-function content_624848808ff631_86746754 (Smarty_Internal_Template $_smarty_tpl) {
+function content_624bf895c703e8_17751800 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_938423626624848808e4145_03348167', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1241500498624bf895bfbc01_16580048', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_938423626624848808e4145_03348167 extends Smarty_Internal_Block
+class Block_1241500498624bf895bfbc01_16580048 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_938423626624848808e4145_03348167',
+    0 => 'Block_1241500498624bf895bfbc01_16580048',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,7 +56,7 @@ logout"  class="pure-menu-heading pure-menu-link">wyloguj</a>
 calcCompute" method="post" class="pure-form pure-form-aligned bottom-margin">
 	<legend>Kalkulator kredytowy</legend>
 	<fieldset>
-        <div class="row">
+             <div class="row">
         <div class="col-6">
 
             <!-- Form -->
@@ -90,7 +90,6 @@ calcCompute">
                 <hr />
             
         
-
 <?php $_smarty_tpl->_subTemplateRender('file:messages.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 

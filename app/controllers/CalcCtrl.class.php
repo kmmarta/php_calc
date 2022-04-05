@@ -15,10 +15,6 @@ namespace app\controllers;
 use app\forms\CalcForm;
 use app\transfer\CalcResult;
 
-/** Kontroler kalkulatora
- * @author Przemysław Kudłacik
- *
- */
 class CalcCtrl {
 
 	private $form;   //dane formularza (do obliczeń i dla widoku)
@@ -63,7 +59,6 @@ class CalcCtrl {
 		if ($this->form->c == "") {
 			getMessages()->addError('Nie podano oprocentowania');
 		}
-		
 		// nie ma sensu walidować dalej gdy brak parametrów
 		if (! getMessages()->isError()) {
 			
@@ -80,14 +75,13 @@ class CalcCtrl {
 			}
 		}
 		
-		
 		return ! getMessages()->isError();
 	}
 	
 	/** 
 	 * Pobranie wartości, walidacja, obliczenie i wyświetlenie
 	 */
-	public function process(){
+	public function action_calcCompute(){
 
 		$this->getParams();
 		
@@ -111,6 +105,10 @@ class CalcCtrl {
 		$this->generateView();
 	
         }
+	public function action_calcShow(){
+		getMessages()->addInfo('Witaj w kalkulatorze');
+		$this->generateView();
+	}
 	
 	/**
 	 * Wygenerowanie widoku
@@ -119,7 +117,7 @@ class CalcCtrl {
 
 		getSmarty()->assign('user',unserialize($_SESSION['user']));
 				
-		getSmarty()->assign('page_title','Kalkulator kredytowt');
+		getSmarty()->assign('page_title','Kalkulator kredytowy');
 
 		getSmarty()->assign('form',$this->form);
 		getSmarty()->assign('res',$this->result);
