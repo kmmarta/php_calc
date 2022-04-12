@@ -6,6 +6,10 @@
 	<a href="{$conf->action_url}logout"  class="pure-menu-heading pure-menu-link">wyloguj</a>
 	<span style="float:right;">użytkownik: {$user->login}, rola: {$user->role}</span>
 </div>
+<div class="pure-menu pure-menu-horizontal bottom-margin">
+	<a href="{$conf->action_url}showStrona"  class="pure-menu-heading pure-menu-link"> STRONA DLA ADMINA</a>
+	
+</div>
 
 <form action="{$conf->action_url}calcCompute" method="post" class="pure-form pure-form-aligned bottom-margin">
 	<legend>Kalkulator kredytowy</legend>
@@ -36,8 +40,18 @@
                         </div>
                     </div>
                 </form>
+                        <section>
+<div class="row">
+             
+    <h2> WITAM W KALKULATORZE KREDYTOWYM</h2>
+                <img src="{$conf->app_url}/images/TEKILA.jpg" alt="WITAM W KALKULATORZE KREDYTOWYM" width="350" height="501" />
+               
+                <?php
 
-                <hr />
+            </div>
+            <p> </p>
+        </section>
+       
             
         
 {include file='messages.tpl'}

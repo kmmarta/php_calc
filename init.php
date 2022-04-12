@@ -54,3 +54,29 @@ session_start(); //uruchom lub kontynuuj sesję
 $conf->roles = isset($_SESSION['_roles']) ? unserialize($_SESSION['_roles']) : array(); //wczytaj role
 
 $router->setAction( getFromRequest('action') );
+require_once 'Medoo/Medoo.class.php'; 
+try {
+    $database = new Medoo\medoo([
+        // [required]
+        'type' => 'mysql',
+        'host' => 'localhost',
+        'database' => 'c',
+        'username' => 'root',
+        'password' => '',        
+        'charset' => 'utf8',
+        'collation' => 'utf8_general_ci',
+        'port' => 3306,
+        'logging' => true,
+        'option' => [
+            PDO::ATTR_CASE => PDO::CASE_NATURAL,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        ],
+    ]);
+} catch (PDOException $ex) {
+    getMessages()->addError("DB Error: " . $ex->getMessage());
+}
+
+function &getDatabase(): Medoo\Medoo {
+    global $database;
+    return $database;
+}
